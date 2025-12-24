@@ -1,0 +1,8 @@
+<?php
+// Settings-Renderer für Recent Global Comments Feed (nur Speicherbutton, keine Hinweise)
+class Recent_Global_Comments_Feed_Settings_Renderer {
+    public function render_settings_form() {
+        // KEIN <form> mehr, nur noch die Nonce!
+        return wp_nonce_field('ps_extensions_scope_save','ps_extensions_scope_nonce',true,false);
+    }
+}
